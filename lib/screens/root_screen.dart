@@ -1,5 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:reward_app/screens/home/home_screen.dart';
 import 'package:reward_app/screens/partners/partners.dart';
 
 class RootScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _RootScreenState extends State<RootScreen> {
   int currentIndex = 2;
 
   List<Widget> screens = [
-    const Center(child: Text("Home")),
+    const HomeScreen(),
     const Center(child: Text("Services")),
     const PartnerScreen(),
     const Center(child: Text("Activity")),
