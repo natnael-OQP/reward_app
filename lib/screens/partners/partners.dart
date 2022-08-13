@@ -79,14 +79,18 @@ class _PartnerScreenState extends State<PartnerScreen> {
             ),
           ),
           const Gap(20),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 18.0),
-            child: Text(
-              "Top Offers",
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-              ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18.0),
+            child: Column(
+              children: const [
+                Text(
+                  "Top Offers",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
