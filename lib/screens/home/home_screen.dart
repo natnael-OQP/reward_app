@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: const [
                         Icon(Icons.local_post_office_outlined),
-                        SizedBox(width: 10),
+                        Gap(10),
                         Text("Posts"),
                       ],
                     ),
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: const [
                         Icon(Icons.calendar_month),
-                        SizedBox(width: 10),
+                        Gap(10),
                         Text("Events"),
                       ],
                     ),
@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: const [
                         Icon(Icons.people_outline),
-                        SizedBox(width: 10),
+                        Gap(10),
                         Text("Contact "),
                       ],
                     ),
