@@ -83,7 +83,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 )
               ],
               bottom: TabBar(
-                isScrollable: true,
                 labelColor: Colors.blue,
                 indicatorColor: Colors.blue,
                 unselectedLabelColor: Colors.black54,
@@ -91,41 +90,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 tabs: <Widget>[
                   Tab(
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.local_post_office_outlined,
-                          color:
-                              currentIndex == 0 ? Colors.blue : Colors.black54,
-                        ),
-                        const Gap(10),
-                        const Text("Posts")
+                      children: const [
+                        Icon(Icons.local_post_office_outlined),
+                        SizedBox(width: 10),
+                        Text("Posts"),
                       ],
                     ),
                   ),
                   Tab(
                     child: Row(
-                      children: [
-                        Icon(
-                          Icons.calendar_month,
-                          color:
-                              currentIndex == 1 ? Colors.blue : Colors.black54,
-                        ),
-                        const Gap(10),
-                        const Text("Events")
+                      children: const [
+                        Icon(Icons.calendar_month),
+                        SizedBox(width: 10),
+                        Text("Events"),
                       ],
                     ),
                   ),
                   Tab(
                     child: Row(
-                      children: [
-                        Icon(
-                          Icons.people_outline,
-                          color:
-                              currentIndex == 2 ? Colors.blue : Colors.black54,
-                        ),
-                        const Gap(10),
-                        const Text("Connect")
+                      children: const [
+                        Icon(Icons.people_outline),
+                        SizedBox(width: 10),
+                        Text("Contact "),
                       ],
                     ),
                   ),
@@ -142,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: Theme.of(context).textTheme.headline6,
               ),
             ),
-            const EventsScreen(),
+            const EventsScreen(), // events screen
             Center(
               child: Text(
                 "Connect",
