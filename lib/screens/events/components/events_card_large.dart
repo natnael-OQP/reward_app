@@ -16,7 +16,7 @@ class EventsCardLarge extends StatelessWidget {
     return Container(
       height: 200,
       width: double.infinity,
-      margin: const EdgeInsets.only(left: 20, right: 20),
+      margin: const EdgeInsets.only(left: 20, right: 20, bottom: 40),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
@@ -29,7 +29,7 @@ class EventsCardLarge extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 25, top: 35),
+            padding: const EdgeInsets.only(left: 25, top: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
