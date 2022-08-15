@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:reward_app/components/separator.dart';
+import 'package:reward_app/models/event.dart';
 import 'package:reward_app/screens/events/components/event_card.dart';
 import 'package:reward_app/screens/events/components/events_card_large.dart';
 
@@ -50,20 +51,14 @@ class EventsScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   Row(
-                    children: const [
-                      EventsCard(
-                        image:
-                            "https://images.unsplash.com/photo-1557425493-6f90ae4659fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-                        title: "Business Head Meeting",
-                        date: "Mon Jui 18, 12:00 pm",
+                    children: List.generate(
+                      demo_events.length,
+                      (index) => EventsCard(
+                        image: demo_events[index].image,
+                        title: demo_events[index].title,
+                        date: demo_events[index].date,
                       ),
-                      EventsCard(
-                        image:
-                            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=884&q=80",
-                        title: "Business Head Meeting",
-                        date: "Mon Jui 18, 12:00 pm",
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),
@@ -71,18 +66,15 @@ class EventsScreen extends StatelessWidget {
             const Gap(20),
             const Separator(height: 30),
             const Gap(20),
-            const EventsCardLarge(
-              image:
-                  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=884&q=80",
-              title: "Business Head Meeting",
-              date: "Mon Jui 18, 12:00 pm",
-            ),
-            const EventsCardLarge(
-              image:
-                  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=884&q=80",
-              title: "Business Head Meeting",
-              date: "Mon Jui 18, 12:00 pm",
-            ),
+            Column(
+              children: List.generate(
+                  demo_events.length,
+                  (index) => EventsCardLarge(
+                        image: demo_events[index].image,
+                        title: demo_events[index].title,
+                        date: demo_events[index].date,
+                      )),
+            )
           ],
         ),
       ),
